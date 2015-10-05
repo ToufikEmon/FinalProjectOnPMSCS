@@ -6,12 +6,12 @@
     <color name="background_blue">#37c3e0</color>
     <color name="backround_olive">#008080</color>
     <color name="background_megenta_blue">#06b282</color>
-    <color name="list_background">#333333</color>
+    <color name="list_background">#920204</color>
     <color name="counter_text_bg">#FFFAF0</color>
-    <color name="list_divider">#06b2a5</color>
+    <color name="list_divider">#FFFFFF</color>
     <color name="list_item_title">#FFFFFF</color>
     <color name="counter_text_color">#F0FFF0</color>
-    <color name="list_background_pressed">#007777</color>
+    <color name="list_background_pressed">#06C6F9</color>
     <color name="White">#FFFFFF</color>
     <color name="Ivory">#FFFFF0</color>
     <color name="LightYellow">#FFFFE0</color>

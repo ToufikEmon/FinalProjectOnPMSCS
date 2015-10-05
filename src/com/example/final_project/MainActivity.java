@@ -70,6 +70,11 @@ public class MainActivity extends Activity {
 		// Communities, Will add a counter here
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons
 				.getResourceId(3, -1)));
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons
+				.getResourceId(4, -1)));
+		
+		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons
+				.getResourceId(5, -1)));
 		
 		// Recycle the typed array
 		navMenuIcons.recycle();
@@ -168,14 +173,20 @@ public class MainActivity extends Activity {
 			fragment = new HomeFragment();
 			break;
 		case 1:
-			fragment = new ClcikToApply();
+			fragment = new CSEJU();
 
 			break;
 		case 2:
-			fragment = new GetAdmitCard();
+			fragment = new PMSCS();
 			break;
 		case 3:
-			fragment = new HowToApply();
+			fragment = new HistoryOfJu();
+			break;
+		case 4:
+			fragment = new BeautifulPlaces();
+			break;
+		case 5:
+			fragment = new AboutUs();
 			break;
 	
 

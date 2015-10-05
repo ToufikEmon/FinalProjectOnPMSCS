@@ -4,24 +4,28 @@
     <string name="app_name">PMSCS ADMISSION</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="button_registraion">Click\nTo\nApply</string>
-    <string name="button_admit_print">Get\nAdmit\nCard</string>
-    <string name="button_how_to_apply">How\nTo\nApply</string>
+    <string name="button_registraion">Click To Apply</string>
+    <string name="button_admit_print">Get Admit Card</string>
+    <string name="button_how_to_apply">How To Apply</string>
     <string name="desc_list_item_icon">Item Icon</string>
-    <string name="text_view_text"><B><I>Please Fill Up The Personal Details Form.......</I></B></string>
+    <string name="text_view_text"><B><I>The Personal Details Form</I></B></string>
 
     <string-array name="nav_drawer_item">
         <item>Home</item>
-        <item>Click To Apply</item>
-        <item>Get Admit Card</item>
-        <item>How To Apply</item>
+        <item>CSE JU</item>
+        <item>PMSCS</item>
+        <item>History Of JU</item>
+        <item>Beautiful Places</item>
+        <item>About Us!</item>
     </string-array>
 
     <array name="nav_drawer_icons">
         <item>@drawable/ic_home</item>
-        <item>@drawable/ic_home</item>
-        <item>@drawable/ic_home</item>
-        <item>@drawable/ic_home</item>
+        <item>@drawable/cse_ju</item>
+        <item>@drawable/pmscs</item>
+        <item>@drawable/hisytory</item>
+        <item>@drawable/beautiful_places</item>
+        <item>@drawable/about_us</item>
     </array>
 
     <string name="applicant_name">Applicant Name ......</string>
@@ -36,13 +40,19 @@
     <string name="present_status">Present Status And Organization</string>
     <string name="present_experience">Present Experience</string>
     <string name="btn_submit">Submit</string>
-    <!-- Table Name  -->
+    <!-- Table Name -->
     <string name="degree">Degree</string>
     <string name="exam">Exam</string>
     <string name="group">Group</string>
-    <string name="board">Board\nUniv</string>
-    <string name="gpa">CGPA\nClass</string>
+    <string name="board">Board</string>
+    <string name="gpa">CGPA</string>
     <string name="year">Years</string>
     <string name="academic_details">Academic Details</string>
+    <string name="pmscs">Highly qualified faculty members with international teaching and research exposures
+Trimester system to complete the program in shortest possible time
+Classes conducted on Fridays only
+Wi-fi connectivity and modern computer lab facilities</string>
+    <string name="cseju">The study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</string>
+    <string name="historyju">The study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</string>
 
 </resources>

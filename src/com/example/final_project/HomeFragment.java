@@ -26,9 +26,9 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 		// Button initialise in a fragment
-		btnClikToApply = (Button) view.findViewById(R.id.btnClickToApply);
-		btnGetAdmitCard = (Button) view.findViewById(R.id.btnAdmitCardPrint);
-		btnHowToApply = (Button) view.findViewById(R.id.btnHowToApply);
+		btnClikToApply = (Button) view.findViewById(R.id.btnApply);
+		btnGetAdmitCard = (Button) view.findViewById(R.id.btnGetAdmitCard);
+		btnHowToApply = (Button) view.findViewById(R.id.btnHowToAply);
 
 		// Set Action In Button
 		btnClikToApply.setOnClickListener(this);
@@ -44,21 +44,21 @@ public class HomeFragment extends Fragment implements OnClickListener {
 		FragmentTransaction ft = fm.beginTransaction();
 
 		switch (v.getId()) {
-		case R.id.btnClickToApply:
+		case R.id.btnApply:
 
 			ClcikToApply app = new ClcikToApply();
 			ft.replace(R.id.frame_container, app);
 			ft.addToBackStack(null);
 			ft.commit();
 			break;
-		case R.id.btnAdmitCardPrint:
+		case R.id.btnGetAdmitCard:
 
 			GetAdmitCard get = new GetAdmitCard();
 			ft.replace(R.id.frame_container, get);
 			ft.addToBackStack(null);
 			ft.commit();
 			break;
-		case R.id.btnHowToApply:
+		case R.id.btnHowToAply:
 
 			HowToApply how = new HowToApply();
 			ft.replace(R.id.frame_container, how);
