@@ -203,11 +203,9 @@ public final class R {
         public static final int btnGetAdmitCard=0x7f0a002c;
         public static final int btnHowToAply=0x7f0a002d;
         public static final int btnSubmit=0x7f0a0027;
-        public static final int button1=0x7f0a0030;
+        public static final int button1=0x7f0a002e;
         public static final int counter=0x7f0a002a;
         public static final int drawer_layout=0x7f0a0000;
-        public static final int editText1=0x7f0a002e;
-        public static final int editText2=0x7f0a002f;
         public static final int edtApplicantFathhersName=0x7f0a0007;
         public static final int edtApplicantMothersName=0x7f0a0008;
         public static final int edtApplicantName=0x7f0a0006;
@@ -225,6 +223,7 @@ public final class R {
         public static final int edtHonsBoard=0x7f0a0022;
         public static final int edtHonsGroup=0x7f0a0021;
         public static final int edtNationality=0x7f0a0009;
+        public static final int edtPassword=0x7f0a002f;
         public static final int edtPermanentAddress=0x7f0a000e;
         public static final int edtPresentAddress=0x7f0a000d;
         public static final int edtPresentExperience=0x7f0a0026;
@@ -234,6 +233,7 @@ public final class R {
         public static final int edtSSCCGPA=0x7f0a0019;
         public static final int edtSSCGroup=0x7f0a0017;
         public static final int edtSSCYear=0x7f0a001a;
+        public static final int edtUserName=0x7f0a0030;
         public static final int frame_container=0x7f0a0001;
         public static final int icon=0x7f0a0028;
         public static final int imageView1=0x7f0a0004;
@@ -283,6 +283,7 @@ public final class R {
          */
         public static final int degree=0x7f060014;
         public static final int desc_list_item_icon=0x7f060006;
+        public static final int download=0x7f06001e;
         public static final int email=0x7f06000c;
         public static final int exam=0x7f060015;
         public static final int fathers_name=0x7f060009;
