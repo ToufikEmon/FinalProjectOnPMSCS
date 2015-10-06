@@ -2,6 +2,8 @@ package com.example.final_project;
 
 import java.util.ArrayList;
 
+import com.example.all_cv.AboutUs;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
