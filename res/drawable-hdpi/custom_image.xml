@@ -10,7 +10,7 @@
                 android:endColor="#57C1EF"
                 android:angle="270" />
             <stroke
-                android:width="3dp"
+                android:width="10dp"
                 android:color="@color/DeepPink" />
             <corners
                 android:radius="3dp" />
@@ -29,7 +29,7 @@
                 android:startColor="#33B5E5"
                 android:angle="270" />
             <stroke
-                android:width="3dp"
+                android:width="10dp"
                 android:color="@color/DeepSkyBlue" />
             <corners
                 android:radius="3dp" />
@@ -48,7 +48,7 @@
                 android:startColor="#33B5E5"
                 android:angle="270" />
             <stroke
-                android:width="3dp"
+                android:width="10dp"
                 android:color="@color/DeepSkyBlue" />
             <corners
                 android:radius="3dp" />

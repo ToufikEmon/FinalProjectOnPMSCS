@@ -2,51 +2,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
- 
+
     <ViewFlipper
         android:id="@+id/flipper1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:flipInterval="3000"
         android:inAnimation="@anim/slide_in_right"
-        android:outAnimation="@anim/slide_out_left"
-        android:layout_centerInParent="true" >
- 
+        android:outAnimation="@anim/slide_out_left" >
+
         <ImageView
-            android:src="@drawable/muktomonch"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="bla"
-            android:layout_gravity="center_horizontal" />
- 
+            android:scaleType="fitXY"
+            android:src="@drawable/muktomonch" />
+
         <ImageView
-            android:src="@drawable/shaheedminar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="vuha"
-            android:layout_gravity="center_horizontal" />
- 
+            android:scaleType="fitXY"
+            android:src="@drawable/shaheedminar" />
+
         <ImageView
-            android:src="@drawable/hall"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="bl"
-            android:layout_gravity="center_horizontal" />
- 
+            android:scaleType="fitXY"
+            android:src="@drawable/hall" />
+
         <ImageView
-            android:src="@drawable/ekus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="chyon"
-            android:layout_gravity="center_horizontal" />
- 
+            android:scaleType="fitXY"
+            android:src="@drawable/ekus" />
+
         <ImageView
-            android:src="@drawable/maingate"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
             android:contentDescription="emo"
-            android:layout_gravity="center_horizontal" />
- 
+            android:scaleType="fitXY"
+            android:src="@drawable/maingate" />
     </ViewFlipper>
 
     <Button
@@ -57,5 +61,5 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/custom_button"
         android:text="Start Slide Show" />
- 
+
 </RelativeLayout>

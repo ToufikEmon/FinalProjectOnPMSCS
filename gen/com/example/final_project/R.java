@@ -252,10 +252,10 @@ public final class R {
         public static final int flipper1=0x7f0b0010;
         public static final int frame_container=0x7f0b000e;
         public static final int icon=0x7f0b0033;
-        public static final int imageView1=0x7f0b0012;
         public static final int imgAnup=0x7f0b0009;
         public static final int imgChyon=0x7f0b0000;
         public static final int imgEmon=0x7f0b0005;
+        public static final int imgLoadImage=0x7f0b0012;
         public static final int list_slidermenu=0x7f0b000f;
         public static final int tbvTable=0x7f0b001d;
         public static final int textView1=0x7f0b0006;

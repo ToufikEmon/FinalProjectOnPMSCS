@@ -35,7 +35,7 @@ public class ClcikToApply extends Fragment {
 
 		View view = inflater.inflate(R.layout.click_to_apply, container, false);
 
-		imageView_profilepic = (ImageView) view.findViewById(R.id.imageView1);
+		imageView_profilepic = (ImageView) view.findViewById(R.id.imgLoadImage);
 		imageView_profilepic.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
