@@ -1,4 +1,4 @@
-package com.example.friendsbookcse2nt;
+package com.example.round_image;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;

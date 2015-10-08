@@ -2,8 +2,6 @@ package com.example.final_project;
 
 import java.util.ArrayList;
 
-import com.example.all_cv.AboutUs;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
@@ -19,6 +17,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.all_cv.AboutUs;
 
 @SuppressLint("NewApi")
 public class MainActivity extends Activity {
@@ -74,10 +74,10 @@ public class MainActivity extends Activity {
 				.getResourceId(3, -1)));
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons
 				.getResourceId(4, -1)));
-		
+
 		navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons
 				.getResourceId(5, -1)));
-		
+
 		// Recycle the typed array
 		navMenuIcons.recycle();
 
@@ -170,10 +170,12 @@ public class MainActivity extends Activity {
 	private void displayView(int position) {
 		// update the main content by replacing fragments
 		Fragment fragment = null;
+
 		switch (position) {
 		case 0:
 			fragment = new HomeFragment();
 			break;
+
 		case 1:
 			fragment = new CSEJU();
 
@@ -190,7 +192,6 @@ public class MainActivity extends Activity {
 		case 5:
 			fragment = new AboutUs();
 			break;
-	
 
 		default:
 			break;

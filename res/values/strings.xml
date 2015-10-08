@@ -57,4 +57,7 @@ Wi-fi connectivity and modern computer lab facilities</string>
 
     
     <string name="download">Download PDF</string>
+    
+     <string name="str_btn_start">Start SlideShow</string>
+    <string name="str_btn_stop">Stop SlideShow</string>
 </resources>

@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.final_project.R;
-import com.example.friendsbookcse2nt.RoundImage;
+import com.example.round_image.RoundImage;
 
 public class AboutUs extends Fragment {
 
