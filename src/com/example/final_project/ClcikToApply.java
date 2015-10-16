@@ -13,13 +13,17 @@ import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class ClcikToApply extends Fragment {
 
 	private static int RESULT_LOAD_IMG = 1;
+	
+	EditText edtApplicantName;
 
 	// GUI components
 	// The button
@@ -34,6 +38,25 @@ public class ClcikToApply extends Fragment {
 			Bundle savedInstanceState) {
 
 		View view = inflater.inflate(R.layout.click_to_apply, container, false);
+		
+		
+		/*
+		 * Initialize all the editText to add them action 
+		 * 
+		 * */
+		
+		
+		edtApplicantName = (EditText) view.findViewById(R.id.edtApplicantName);
+		edtApplicantName.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				 
+		                edtApplicantName.setFocusableInTouchMode(true);
+		           
+				
+			}
+		});
 
 		imageView_profilepic = (ImageView) view.findViewById(R.id.imgLoadImage);
 		imageView_profilepic.setOnClickListener(new View.OnClickListener() {

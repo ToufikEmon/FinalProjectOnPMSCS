@@ -532,6 +532,87 @@
                     android:textSize="12sp"
                     android:textStyle="bold" />
             </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <EditText
+                    android:id="@+id/edtOthers"
+                    android:layout_width="50sp"
+                    android:layout_height="30sp"
+                    android:layout_marginLeft="1sp"
+                    android:layout_marginRight="1sp"
+                    android:layout_marginTop="1sp"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="Others"
+                    android:textColor="@color/Black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtOtherGroup"
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1sp"
+                    android:layout_marginRight="1sp"
+                    android:layout_marginTop="1sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="@string/group"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtOtherBoard"
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1sp"
+                    android:layout_marginRight="1sp"
+                    android:layout_marginTop="1sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="@string/board"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtOtherSCGPA"
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1sp"
+                    android:layout_marginRight="1sp"
+                    android:layout_marginTop="1sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="@string/gpa"
+                    android:inputType="number"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edtOtherYear"
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="1sp"
+                    android:layout_marginRight="0sp"
+                    android:layout_marginTop="1sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_text_style"
+                    android:gravity="center"
+                    android:hint="@string/year"
+                    android:inputType="number"
+                    android:textColor="@color/Black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </TableRow>
         </TableLayout>
 
         <EditText

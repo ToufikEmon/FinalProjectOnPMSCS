@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -60,11 +61,16 @@ public class HomeFragment extends Fragment implements OnClickListener {
 			break;
 		case R.id.btnHowToAply:
 
-			HowToApply how = new HowToApply();
-			ft.replace(R.id.frame_container, how);
-			ft.addToBackStack(null);
-			ft.commit();
+			
+			Intent intent = new Intent(getActivity(), HowToApply.class);
+			startActivity(intent);
 			break;
+
+		// HowToApply how = new HowToApply();
+		// ft.replace(R.id.frame_container, how);
+		// ft.addToBackStack(null);
+		// ft.commit();
+		// break;
 
 		default:
 			break;

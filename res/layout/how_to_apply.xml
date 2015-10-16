@@ -18,7 +18,7 @@
         android:padding="10dp" >
 
         <Button
-            android:id="@+id/btnApply"
+            android:id="@+id/btnDownload"
             style="@style/ButtonText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
