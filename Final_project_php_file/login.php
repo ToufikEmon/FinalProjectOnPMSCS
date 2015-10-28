@@ -1,13 +1,13 @@
 <?php
-$con = mysql_connect("localhost","root","") or die(mysql_error());
+$con = mysqli_connect("localhost","root","","final_project") or die(mysql_error());
  
         // Selecing database
-$db = mysql_select_db("androidhive") or die(mysql_error()) or die(mysql_error());
-$username = $_POST['username'];
-$password = $_POST['password'];
-$query_search = "select * from tbl_user where username = '".$username."' AND password = '".$password. "'";
-$query_exec = mysql_query($query_search) or die(mysql_error());
-$rows = mysql_num_rows($query_exec);
+$db = mysqli_select_db($con,"final_project") or die(mysql_error()) or die(mysql_error());
+$mobile_number = $_POST['mobile_number'];
+$pin = $_POST['pin'];
+$query_search = "select * from payment_clearence where mobile_number = '".$mobile_number."' AND pin = '".$pin. "'";
+$query_exec = mysqli_query($con,$query_search) or die(mysql_error());
+$rows = mysqli_num_rows($query_exec);
 //echo $rows;
  if($rows == 0) { 
  echo "No Such User Found"; 
