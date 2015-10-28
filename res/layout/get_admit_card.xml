@@ -19,7 +19,7 @@
         android:text="@string/btn_submit" />
 
     <EditText
-        android:id="@+id/edtPassword"
+        android:id="@+id/edtPinNumber"
         style="@style/ButtonText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -28,20 +28,29 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/edit_text_style"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="numberPassword" />
+        android:hint="PIN Number"
+        android:inputType="number" />
 
     <EditText
-        android:id="@+id/edtUserName"
+        android:id="@+id/edtMobileNumber"
         style="@style/ButtonText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_above="@+id/edtPassword"
+        android:layout_above="@+id/edtPinNumber"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="15dp"
         android:background="@drawable/edit_text_style"
         android:ems="10"
-        android:hint="User Name"
-        android:inputType="text" />
+        android:hint="Mobile Number"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="14dp"
+        android:hint="Text Here" />
 
 </RelativeLayout>

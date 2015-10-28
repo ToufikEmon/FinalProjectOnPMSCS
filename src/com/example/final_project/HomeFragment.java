@@ -2,8 +2,6 @@ package com.example.final_project;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -41,27 +39,22 @@ public class HomeFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-		FragmentManager fm = getFragmentManager();
-		FragmentTransaction ft = fm.beginTransaction();
 
 		switch (v.getId()) {
 		case R.id.btnApply:
 
-			ClcikToApply app = new ClcikToApply();
-			ft.replace(R.id.frame_container, app);
-			ft.addToBackStack(null);
-			ft.commit();
+			Intent intentClickToApply = new Intent(getActivity(),
+					ClcikToApply.class);
+			startActivity(intentClickToApply);
 			break;
 		case R.id.btnGetAdmitCard:
 
-			GetAdmitCard get = new GetAdmitCard();
-			ft.replace(R.id.frame_container, get);
-			ft.addToBackStack(null);
-			ft.commit();
+			Intent intentGetAdmiCard = new Intent(getActivity(),
+					GetAdmitCard.class);
+			startActivity(intentGetAdmiCard);
 			break;
 		case R.id.btnHowToAply:
 
-			
 			Intent intent = new Intent(getActivity(), HowToApply.class);
 			startActivity(intent);
 			break;

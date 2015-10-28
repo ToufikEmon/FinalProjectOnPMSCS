@@ -29,7 +29,7 @@ public class HowToApply extends Activity {
 	    int downloadedSize = 0;
 	    int totalSize = 0;
 	    TextView cur_val;
-	    String dwnload_file_path = "http://10.52.55.107/Final_project/toufik_ahmed_emon_cv.pdf";
+	    String dwnload_file_path = "http://10.53.175.43/Final_project/toufik_ahmed_emon_cv.pdf";
 	
 	
 	

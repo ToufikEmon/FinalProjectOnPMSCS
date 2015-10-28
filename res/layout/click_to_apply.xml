@@ -190,12 +190,63 @@
             android:textStyle="bold|italic" >
         </EditText>
 
+        <TableLayout
+            android:id="@+id/tableSexBlood"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/edtPermanentAddress" >
+
+            <TableRow
+                android:layout_width="150sp"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tvSex"
+                    style="@style/ButtonText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_view_style"
+                    android:text="SEX:"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spSex"
+                    style="@style/ButtonText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_button"
+                    android:entries="@array/sex_array"
+                    android:prompt="@string/spinner_sex_prompt" />
+
+                <TextView
+                    android:id="@+id/tvBloodGroup"
+                    style="@style/ButtonText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50sp"
+                    android:background="@drawable/text_view_style"
+                    android:text="Blood Group:"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spBloodGroup"
+                    style="@style/ButtonText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="0sp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/custom_button"
+                    android:entries="@array/blood_group"
+                    android:prompt="@string/spinner_blood_group" />
+            </TableRow>
+        </TableLayout>
+
         <TextView
             android:id="@+id/textView2"
             style="@style/ButtonText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edtPermanentAddress"
+            android:layout_below="@+id/tableSexBlood"
             android:layout_marginTop="18dp"
             android:background="@drawable/text_view_style"
             android:gravity="center"

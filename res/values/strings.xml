@@ -54,10 +54,26 @@ Classes conducted on Fridays only
 Wi-fi connectivity and modern computer lab facilities</string>
     <string name="cseju">The study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</string>
     <string name="historyju">The study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</string>
-
-    
     <string name="download">Download PDF</string>
-    
-     <string name="str_btn_start">Start SlideShow</string>
+    <string name="str_btn_start">Start SlideShow</string>
     <string name="str_btn_stop">Stop SlideShow</string>
+
+    <string-array name="sex_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="blood_group">
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+    
+    <string name="spinner_sex_prompt">Select Your Gender </string>
+    <string name="spinner_blood_group">Select Your Blood Group </string>
+
 </resources>

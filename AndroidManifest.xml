@@ -33,6 +33,9 @@
             </intent-filter>
         </activity>
         <activity android:name="HowToApply"></activity>
+        <activity android:name="GetAdmitCard"></activity>
+        <activity android:name="AdmitCardClass"></activity>
+        <activity android:name="ClcikToApply"></activity>
     </application>
 
 </manifest>
