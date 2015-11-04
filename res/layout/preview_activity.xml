@@ -10,23 +10,12 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin" >
 
-        <ImageView
-            android:id="@+id/imgLoadImage"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/custom_image"
-            android:contentDescription="img"
-            android:scaleType="fitXY"
-            android:src="@drawable/upload" />
-
         <Button
             android:id="@+id/button"
             style="@style/ButtonText"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/imgLoadImage"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="94dp"
             android:background="@drawable/text_view_style"
@@ -35,14 +24,14 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/edtApplicantName"
+        <TextView
+            android:id="@+id/tvApplicantName"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/button"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10sp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/applicant_name"
@@ -52,16 +41,16 @@
             android:textStyle="bold|italic" >
 
             <requestFocus />
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtApplicantFathhersName"
+        <TextView
+            android:id="@+id/tvApplicantFathhersName"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/edtApplicantName"
+            android:layout_below="@+id/tvApplicantName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/fathers_name"
@@ -69,32 +58,32 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtApplicantMothersName"
+        <TextView
+            android:id="@+id/tvApplicantMothersName"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/edtApplicantFathhersName"
+            android:layout_below="@+id/tvApplicantFathhersName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:gravity="center"
             android:hint="@string/mothers_name"
             android:inputType="textPersonName"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtNationality"
+        <TextView
+            android:id="@+id/tvNationality"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/edtApplicantMothersName"
+            android:layout_below="@+id/tvApplicantMothersName"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/nationality"
@@ -102,16 +91,16 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtEmail"
+        <TextView
+            android:id="@+id/tvEmail"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/edtNationality"
+            android:layout_below="@+id/tvNationality"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/email"
@@ -119,16 +108,16 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtDateOfBirth"
+        <TextView
+            android:id="@+id/tvDateOfBirth"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/edtEmail"
+            android:layout_below="@+id/tvEmail"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:ems="10"
             android:gravity="center"
             android:hint="@string/date_of_birth"
@@ -136,65 +125,65 @@
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtContactNumber"
+        <TextView
+            android:id="@+id/tvContactNumber"
             style="@drawable/round_button"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/edtDateOfBirth"
+            android:layout_below="@+id/tvDateOfBirth"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:gravity="center"
             android:hint="@string/contact_number"
             android:inputType="phone"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtPresentAddress"
+        <TextView
+            android:id="@+id/tvPresentAddress"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/edtContactNumber"
+            android:layout_below="@+id/tvContactNumber"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:gravity="center"
             android:hint="@string/present_address"
             android:inputType="textPostalAddress"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtPermanentAddress"
+        <TextView
+            android:id="@+id/tvPermanentAddress"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/edtPresentAddress"
+            android:layout_below="@+id/tvPresentAddress"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:gravity="center"
             android:hint="@string/permanent_address"
             android:inputType="textPostalAddress"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
         <TableLayout
             android:id="@+id/tableSexBlood"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/edtPermanentAddress" >
+            android:layout_below="@+id/tvPermanentAddress" >
 
             <TableRow
                 android:layout_width="150sp"
@@ -205,18 +194,9 @@
                     style="@style/ButtonText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:text="SEX:"
                     android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spSex"
-                    style="@style/ButtonText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_button"
-                    android:entries="@array/sex_array"
-                    android:prompt="@string/spinner_sex_prompt" />
 
                 <TextView
                     android:id="@+id/tvBloodGroup"
@@ -224,20 +204,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="50sp"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:text="Blood Group:"
                     android:textSize="18sp" />
-
-                <Spinner
-                    android:id="@+id/spBloodGroup"
-                    style="@style/ButtonText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="0sp"
-                    android:layout_marginTop="15dp"
-                    android:background="@drawable/custom_button"
-                    android:entries="@array/blood_group"
-                    android:prompt="@string/spinner_blood_group" />
             </TableRow>
         </TableLayout>
 
@@ -274,7 +243,7 @@
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:text="@string/degree"
                     android:textColor="@color/Black"
@@ -288,7 +257,7 @@
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:text="@string/group"
                     android:textColor="@color/Black"
@@ -302,7 +271,7 @@
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:text="@string/board"
                     android:textColor="@color/Black"
@@ -316,7 +285,7 @@
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:text="@string/gpa"
                     android:textColor="@color/Black"
@@ -330,7 +299,7 @@
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/text_view_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:text="@string/year"
                     android:textColor="@color/Black"
@@ -342,14 +311,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/edtSSC"
+                <TextView
+                    android:id="@+id/tvSSC"
                     android:layout_width="50sp"
                     android:layout_height="30sp"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="SSC"
                     android:paddingLeft="2sp"
@@ -359,61 +328,61 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtSSCGroup"
+                <TextView
+                    android:id="@+id/tvSSCGroup"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/group"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtSSCBoard"
+                <TextView
+                    android:id="@+id/tvSSCBoard"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/board"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtSSCCGPA"
+                <TextView
+                    android:id="@+id/tvSSCCGPA"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/gpa"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtSSCYear"
+                <TextView
+                    android:id="@+id/tvSSCYear"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="0sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/year"
                     android:inputType="number"
@@ -426,75 +395,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/edtHSC"
+                <TextView
+                    android:id="@+id/tvHSC"
                     android:layout_width="50sp"
                     android:layout_height="30sp"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="HSC"
                     android:textColor="@color/Black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHSCGroup"
+                <TextView
+                    android:id="@+id/tvHSCGroup"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/group"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHSCBoard"
+                <TextView
+                    android:id="@+id/tvHSCBoard"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/board"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHSCCGPA"
+                <TextView
+                    android:id="@+id/tvHSCCGPA"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/gpa"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHSCYear"
+                <TextView
+                    android:id="@+id/tvHSCYear"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="0sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/year"
                     android:inputType="number"
@@ -507,75 +476,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/edtHons"
+                <TextView
+                    android:id="@+id/tvHons"
                     android:layout_width="50sp"
                     android:layout_height="30sp"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="Hons"
                     android:textColor="@color/Black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHonsGroup"
+                <TextView
+                    android:id="@+id/tvHonsGroup"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/group"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHonsBoard"
+                <TextView
+                    android:id="@+id/tvHonsBoard"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/board"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHONSCGPA"
+                <TextView
+                    android:id="@+id/tvHONSCGPA"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/gpa"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtHONSYear"
+                <TextView
+                    android:id="@+id/tvHONSYear"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="0sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/year"
                     android:inputType="number"
@@ -588,75 +557,75 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" >
 
-                <EditText
-                    android:id="@+id/edtOthers"
+                <TextView
+                    android:id="@+id/tvOthers"
                     android:layout_width="50sp"
                     android:layout_height="30sp"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="Others"
                     android:textColor="@color/Black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtOtherGroup"
+                <TextView
+                    android:id="@+id/tvOtherGroup"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/group"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtOtherBoard"
+                <TextView
+                    android:id="@+id/tvOtherBoard"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/board"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtOtherSCGPA"
+                <TextView
+                    android:id="@+id/tvOtherSCGPA"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="1sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/gpa"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:textColor="@color/Black"
                     android:textSize="12sp"
                     android:textStyle="bold" />
 
-                <EditText
-                    android:id="@+id/edtOtherYear"
+                <TextView
+                    android:id="@+id/tvOtherYear"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="1sp"
                     android:layout_marginRight="0sp"
                     android:layout_marginTop="1sp"
                     android:layout_weight="1"
-                    android:background="@drawable/edit_text_style"
+                    android:background="@drawable/text_view_vertical"
                     android:gravity="center"
                     android:hint="@string/year"
                     android:inputType="number"
@@ -666,70 +635,54 @@
             </TableRow>
         </TableLayout>
 
-        <EditText
-            android:id="@+id/edtPresentStatusAndOrganization"
+        <TextView
+            android:id="@+id/tvPresentStatusAndOrganization"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/tbvTable"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:gravity="center"
             android:hint="@string/present_status"
             android:inputType="textPostalAddress"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
-        <EditText
-            android:id="@+id/edtPresentExperience"
+        <TextView
+            android:id="@+id/tvPresentExperience"
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@+id/edtPresentStatusAndOrganization"
+            android:layout_below="@+id/tvPresentStatusAndOrganization"
             android:layout_marginTop="18dp"
-            android:background="@drawable/edit_text_style"
+            android:background="@drawable/text_view_vertical"
             android:gravity="center"
             android:hint="@string/present_experience"
             android:inputType="textPostalAddress"
             android:textAlignment="center"
             android:textSize="16sp"
             android:textStyle="bold|italic" >
-        </EditText>
+        </TextView>
 
         <Button
-            android:id="@+id/btnPreview"
+            android:id="@+id/btnOK"
             style="@drawable/round_button"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edtPresentExperience"
+            android:layout_below="@+id/tvPresentExperience"
             android:layout_marginBottom="10sp"
             android:layout_marginEnd="50sp"
             android:layout_marginStart="50sp"
             android:layout_marginTop="10sp"
             android:background="@drawable/custom_button_white"
             android:gravity="center"
-            android:text="Preview"
+            android:text="Ok"
             android:textStyle="bold|italic" />
-        
-        <Button
-            android:id="@+id/btnSubmit"
-            style="@drawable/round_button"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnPreview"
-            android:layout_marginBottom="10sp"
-            android:layout_marginEnd="50sp"
-            android:layout_marginStart="50sp"
-            android:layout_marginTop="10sp"
-            android:background="@drawable/custom_button"
-            android:gravity="center"
-            android:text="@string/btn_submit"
-            android:textStyle="bold|italic" />
-        
     </RelativeLayout>
 
 </ScrollView>

@@ -68,7 +68,7 @@ public class GetAdmitCard extends Activity {
 
 			httpclient = new DefaultHttpClient();
 			httppost = new HttpPost(
-					"http://10.54.145.82/Final_project/login.php"); // make sure
+					"http://192.168.0.103/Final_project/login.php"); // make sure
 																	// the url
 																	// is
 																	// correct.
@@ -76,11 +76,11 @@ public class GetAdmitCard extends Activity {
 			nameValuePairs = new ArrayList<NameValuePair>(2);
 			// Always use the same variable name for posting i.e the android
 			// side variable name and php side variable name should be similar,
-			nameValuePairs.add(new BasicNameValuePair("payment_id",
+			nameValuePairs.add(new BasicNameValuePair("mobile_number",
 					edtMobileNumber.getText().toString())); // $Edittext_value
 																	// =
 																	// $_POST['Edittext_value'];
-			nameValuePairs.add(new BasicNameValuePair("payment_pin", edtPinNumber
+			nameValuePairs.add(new BasicNameValuePair("pin", edtPinNumber
 					.getText().toString()));
 			httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 			// Execute HTTP Post Request

@@ -8,7 +8,6 @@ import java.util.List;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
@@ -20,7 +19,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -33,6 +31,9 @@ import com.example.save_data_in_database.JSONParser;
 
 public class ClcikToApply extends Activity {
 
+	public static final String UPLOAD_KEY = "image";
+	//private Bitmap bitmap;
+
 	private ProgressDialog pDialog;
 	JSONParser jsonParser = new JSONParser();
 	Spinner spSex, spBloodGroup;
@@ -42,15 +43,17 @@ public class ClcikToApply extends Activity {
 			edtDateOfBirth, edtSSC, edtHSC, edtHons, edtOthers, edtGroupSSC,
 			edtGroupHSC, edtGroupHons, edtGroupOther, edtBoardSSC, edtBoardHSC,
 			edtBoardHons, edtBoardOthers, edtSSCCGPA, edtHSCCGPA, edtHONSCGPA,
-			edtOthersCGPA,edtSSCPassingYear, edtHSCPassingYear,edtHonsPassingYear, edtOthersPassingyear,edtPresentStatusAndOrganization, edtExperience;
+			edtOthersCGPA, edtSSCPassingYear, edtHSCPassingYear,
+			edtHonsPassingYear, edtOthersPassingyear,
+			edtPresentStatusAndOrganization, edtExperience;
 	// ,
 	// ,
-	
+
 	// edtPresentStatusAndOrganization, edtExperience;
 
-	Button btnSubmit;
+	Button btnSubmit, btnPreview;
 
-	private static String url_insert_into_database = "http://10.63.145.199/final_project/insert_data.php";
+	private static String url_insert_into_database = "http://192.168.0.103/final_project/insert_data.php";
 
 	// JSON Node names
 	private static final String TAG_SUCCESS = "success";
@@ -97,13 +100,90 @@ public class ClcikToApply extends Activity {
 		edtHSCCGPA = (EditText) findViewById(R.id.edtHSCCGPA);
 		edtHONSCGPA = (EditText) findViewById(R.id.edtHONSCGPA);
 		edtOthersCGPA = (EditText) findViewById(R.id.edtOtherSCGPA);
-	    edtSSCPassingYear = (EditText) findViewById(R.id.edtSSCYear);
-		 edtHSCPassingYear = (EditText) findViewById(R.id.edtHSCYear);
-		 edtHonsPassingYear = (EditText) findViewById(R.id.edtHONSYear);
-		 edtOthersPassingyear = (EditText) findViewById(R.id.edtOtherYear);
-		 edtPresentStatusAndOrganization = (EditText)
-		 findViewById(R.id.edtPresentStatusAndOrganization);
-		 edtExperience = (EditText) findViewById(R.id.edtPresentExperience);
+		edtSSCPassingYear = (EditText) findViewById(R.id.edtSSCYear);
+		edtHSCPassingYear = (EditText) findViewById(R.id.edtHSCYear);
+		edtHonsPassingYear = (EditText) findViewById(R.id.edtHONSYear);
+		edtOthersPassingyear = (EditText) findViewById(R.id.edtOtherYear);
+		edtPresentStatusAndOrganization = (EditText) findViewById(R.id.edtPresentStatusAndOrganization);
+		edtExperience = (EditText) findViewById(R.id.edtPresentExperience);
+
+		btnPreview = (Button) findViewById(R.id.btnPreview);
+		btnPreview.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+
+				Intent intentGetPreview = new Intent(ClcikToApply.this,
+						Preview.class);
+
+				intentGetPreview.putExtra("applicant_name", edtApplicantName
+						.getText().toString());
+				intentGetPreview.putExtra("father_name", edtFatherName
+						.getText().toString());
+				intentGetPreview.putExtra("mother_name", edtMotherName
+						.getText().toString());
+				intentGetPreview.putExtra("nationality", edtNationality
+						.getText().toString());
+				intentGetPreview.putExtra("permanent_addres",
+						edtPermanentAddress.getText().toString());
+				intentGetPreview.putExtra("present_addres", edtPresentAddress
+						.getText().toString());
+				intentGetPreview.putExtra("contact_number", edtContactNumber
+						.getText().toString());
+				intentGetPreview.putExtra("email", edtEmail.getText()
+						.toString());
+				intentGetPreview.putExtra("date_of_birth", edtDateOfBirth
+						.getText().toString());
+				intentGetPreview.putExtra("sex", spSex.getSelectedItem()
+						.toString());
+				intentGetPreview.putExtra("blood_group", spBloodGroup
+						.getSelectedItem().toString());
+				intentGetPreview.putExtra("ssc", edtSSC.getText().toString());
+				intentGetPreview.putExtra("hsc", edtHSC.getText().toString());
+				intentGetPreview.putExtra("hons", edtHons.getText().toString());
+				intentGetPreview.putExtra("others", edtOthers.getText()
+						.toString());
+				intentGetPreview.putExtra("group_ssc", edtGroupSSC.getText()
+						.toString());
+				intentGetPreview.putExtra("group_hsc", edtGroupHSC.getText()
+						.toString());
+				intentGetPreview.putExtra("group_hons", edtGroupHons.getText()
+						.toString());
+				intentGetPreview.putExtra("group_other", edtGroupOther
+						.getText().toString());
+				intentGetPreview.putExtra("board_ssc", edtBoardSSC.getText()
+						.toString());
+				intentGetPreview.putExtra("board_hsc", edtBoardHSC.getText()
+						.toString());
+				intentGetPreview.putExtra("board_hons", edtBoardHons.getText()
+						.toString());
+				intentGetPreview.putExtra("board_others", edtBoardOthers
+						.getText().toString());
+				intentGetPreview.putExtra("ssc_cgpa", edtSSCCGPA.getText()
+						.toString());
+				intentGetPreview.putExtra("hsc_cgpa", edtHSCCGPA.getText()
+						.toString());
+				intentGetPreview.putExtra("hons_cgpa", edtHONSCGPA.getText()
+						.toString());
+				intentGetPreview.putExtra("others_cgpa", edtOthersCGPA
+						.getText().toString());
+				intentGetPreview.putExtra("ssc_passing_year", edtSSCPassingYear
+						.getText().toString());
+				intentGetPreview.putExtra("hsc_passing_year", edtHSCPassingYear
+						.getText().toString());
+				intentGetPreview.putExtra("hons_passing_year",
+						edtHonsPassingYear.getText().toString());
+				intentGetPreview.putExtra("others_passing_year",
+						edtOthersPassingyear.getText().toString());
+				intentGetPreview.putExtra("present_status_and_organization",
+						edtPresentStatusAndOrganization.getText().toString());
+				intentGetPreview.putExtra("experience", edtExperience.getText()
+						.toString());
+
+				startActivity(intentGetPreview);
+
+			}
+		});
 
 		btnSubmit = (Button) findViewById(R.id.btnSubmit);
 		btnSubmit.setOnClickListener(new OnClickListener() {
@@ -171,31 +251,38 @@ public class ClcikToApply extends Activity {
 			String contact_number = edtContactNumber.getText().toString();
 			String email = edtEmail.getText().toString();
 			String date_of_birth = edtDateOfBirth.getText().toString();
-			String sex = spSex.getContext().toString();
-			String blood_group = spBloodGroup.getContext().toString();
+
+			String sex = spSex.getSelectedItem().toString();
+			String blood_group = spBloodGroup.getSelectedItem().toString();
+
 			String degree1 = edtSSC.getText().toString();
 			String degree2 = edtHSC.getText().toString();
 			String degree3 = edtHons.getText().toString();
 			String degree4 = edtOthers.getText().toString();
+
 			String group1 = edtGroupSSC.getText().toString();
 			String group2 = edtGroupHSC.getText().toString();
 			String group3 = edtGroupHons.getText().toString();
 			String group4 = edtGroupOther.getText().toString();
+
 			String board1 = edtBoardSSC.getText().toString();
 			String board2 = edtBoardHSC.getText().toString();
 			String board3 = edtBoardHons.getText().toString();
 			String board4 = edtBoardOthers.getText().toString();
+
 			String ssc_cgpa = edtSSCCGPA.getText().toString();
 			String hsc_cgpa = edtHSCCGPA.getText().toString();
 			String hons_cgpa = edtHONSCGPA.getText().toString();
 			String others_cgpa = edtOthersCGPA.getText().toString();
-			 String passing_year1 = edtSSCPassingYear.getText().toString();
-			 String passing_year2 = edtHSCPassingYear.getText().toString();
-			 String passing_year3 = edtHonsPassingYear.getText().toString();
-			 String passing_year4 = edtOthersPassingyear.getText().toString();
-			 String status = edtPresentStatusAndOrganization.getText()
-			 .toString();
-			 String organization = edtExperience.getText().toString();
+
+			String passing_year1 = edtSSCPassingYear.getText().toString();
+			String passing_year2 = edtHSCPassingYear.getText().toString();
+			String passing_year3 = edtHonsPassingYear.getText().toString();
+			String passing_year4 = edtOthersPassingyear.getText().toString();
+
+			String status = edtPresentStatusAndOrganization.getText()
+					.toString();
+			String organization = edtExperience.getText().toString();
 
 			List<NameValuePair> params = new ArrayList<NameValuePair>();
 			params.add(new BasicNameValuePair("applicant_name", applicant_name));
@@ -211,66 +298,69 @@ public class ClcikToApply extends Activity {
 			params.add(new BasicNameValuePair("date_of_birth", date_of_birth));
 			params.add(new BasicNameValuePair("sex", sex));
 			params.add(new BasicNameValuePair("blood_group", blood_group));
+
 			params.add(new BasicNameValuePair("degree1", degree1));
 			params.add(new BasicNameValuePair("degree2", degree2));
 			params.add(new BasicNameValuePair("degree3", degree3));
 			params.add(new BasicNameValuePair("degree4", degree4));
+
 			params.add(new BasicNameValuePair("group1", group1));
 			params.add(new BasicNameValuePair("group2", group2));
 			params.add(new BasicNameValuePair("group3", group3));
 			params.add(new BasicNameValuePair("group4", group4));
+
 			params.add(new BasicNameValuePair("board1", board1));
 			params.add(new BasicNameValuePair("board2", board2));
 			params.add(new BasicNameValuePair("board3", board3));
 			params.add(new BasicNameValuePair("board4", board4));
+
 			params.add(new BasicNameValuePair("ssc_cgpa", ssc_cgpa));
 			params.add(new BasicNameValuePair("hsc_cgpa", hsc_cgpa));
 			params.add(new BasicNameValuePair("hons_cgpa", hons_cgpa));
 			params.add(new BasicNameValuePair("others_cgpa", others_cgpa));
-			 params.add(new BasicNameValuePair("passing_year1",
-			 passing_year1));
-			 params.add(new BasicNameValuePair("passing_year2",
-			 passing_year2));
-			 params.add(new BasicNameValuePair("passing_year3",
-			 passing_year3));
-			 params.add(new BasicNameValuePair("passing_year4",
-			 passing_year4));
-			 params.add(new BasicNameValuePair("organization", organization));
-			 params.add(new BasicNameValuePair("status", status));
+
+			params.add(new BasicNameValuePair("passing_year1", passing_year1));
+			params.add(new BasicNameValuePair("passing_year2", passing_year2));
+			params.add(new BasicNameValuePair("passing_year3", passing_year3));
+			params.add(new BasicNameValuePair("passing_year4", passing_year4));
+
+			params.add(new BasicNameValuePair("organization", organization));
+			params.add(new BasicNameValuePair("status", status));
 
 			JSONObject json = jsonParser.makeHttpRequest(
 					url_insert_into_database, "POST", params);
 
 			// check log cat fro response
-			Log.d("Create Response", json.toString());
+			// Log.d("Create Response", json.toString());
 
 			// check for success tag
-			try {
-				int success = json.getInt(TAG_SUCCESS);
+			// try {
+			// int success = json.getInt(TAG_SUCCESS);
 
-				if (success == 1) {
-					// successfully created product
-					Intent i = new Intent(getApplicationContext(),
-							ClcikToApply.class);
-					startActivity(i);
-					Toast.makeText(getApplicationContext(),
-							"Successfully Inerted Data", Toast.LENGTH_LONG)
-							.show();
+			// if (success == 1) {
+			// successfully created product
+			// Intent i = new Intent(getApplicationContext(),
+			// / ClcikToApply.class);
+			// startActivity(i);
+			// Toast.makeText(getApplicationContext(), "Successfull",
+			// Toast.LENGTH_LONG).show();
 
-					// closing this screen
-					finish();
-				} else {
-					// failed to create product
-				}
-			} catch (JSONException e) {
-				e.printStackTrace();
-			}
+			// closing this screen
+			// finish();
+			// } else {
+			// failed to create product
+			// }
+			// } catch (JSONException e) {
+			// e.printStackTrace();
+			// }
 
 			return null;
 		}
 
 		@Override
 		protected void onPostExecute(String file_url) {
+			Toast.makeText(getApplicationContext(),
+					"Successfully Inerted Data", Toast.LENGTH_LONG).show();
 			pDialog.dismiss();
 		}
 
