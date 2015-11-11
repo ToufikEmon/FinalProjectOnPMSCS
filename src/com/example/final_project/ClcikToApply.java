@@ -1,5 +1,6 @@
 package com.example.final_project;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -11,6 +12,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,8 +21,12 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
+import android.util.Base64;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -32,7 +38,8 @@ import com.example.save_data_in_database.JSONParser;
 public class ClcikToApply extends Activity {
 
 	public static final String UPLOAD_KEY = "image";
-	//private Bitmap bitmap;
+	// private Bitmap bitmap;
+	Bitmap bitmap;
 
 	private ProgressDialog pDialog;
 	JSONParser jsonParser = new JSONParser();
@@ -53,7 +60,7 @@ public class ClcikToApply extends Activity {
 
 	Button btnSubmit, btnPreview;
 
-	private static String url_insert_into_database = "http://192.168.0.103/final_project/insert_data.php";
+	private static String url_insert_into_database = "http://172.148.26.254/final_project/insert_data.php";
 
 	// JSON Node names
 	private static final String TAG_SUCCESS = "success";
@@ -69,8 +76,10 @@ public class ClcikToApply extends Activity {
 	}
 
 	@Override
-	public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+
 		setContentView(R.layout.click_to_apply);
 
 		edtApplicantName = (EditText) findViewById(R.id.edtApplicantName);
@@ -327,6 +336,17 @@ public class ClcikToApply extends Activity {
 			params.add(new BasicNameValuePair("organization", organization));
 			params.add(new BasicNameValuePair("status", status));
 
+			ByteArrayOutputStream stream = new ByteArrayOutputStream();
+			// Must compress the Image to reduce image size to make upload easy
+			bitmap.compress(Bitmap.CompressFormat.PNG, 50, stream);
+			byte[] byte_arr = stream.toByteArray();
+			// Encode Image to String
+			String image_data = Base64.encodeToString(byte_arr, 0);
+
+			Log.d("Succesfully Inserted Photo", image_data);
+
+			params.add(new BasicNameValuePair("image", image_data));
+
 			JSONObject json = jsonParser.makeHttpRequest(
 					url_insert_into_database, "POST", params);
 
@@ -359,8 +379,8 @@ public class ClcikToApply extends Activity {
 
 		@Override
 		protected void onPostExecute(String file_url) {
-			Toast.makeText(getApplicationContext(),
-					"Successfully Inerted Data", Toast.LENGTH_LONG).show();
+			Toast.makeText(ClcikToApply.this, "Successfully Inerted Data",
+					Toast.LENGTH_LONG).show();
 			pDialog.dismiss();
 		}
 
@@ -371,17 +391,17 @@ public class ClcikToApply extends Activity {
 		super.onActivityResult(requestCode, resultCode, data);
 		try {
 			// When an Image is picked
-			if (requestCode == RESULT_LOAD_IMG
-					&& resultCode == ClcikToApply.RESULT_OK && null != data) {
+			if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK
+					&& null != data) {
 				// Get the Image from data
 				decodeUri(data.getData());
 
 			} else {
-				Toast.makeText(ClcikToApply.this, "You haven't picked Image",
-						Toast.LENGTH_LONG).show();
+				Toast.makeText(getApplicationContext(),
+						"You haven't picked Image", Toast.LENGTH_LONG).show();
 			}
 		} catch (Exception e) {
-			Toast.makeText(ClcikToApply.this, "Something went wrong",
+			Toast.makeText(getApplicationContext(), "Something went wrong",
 					Toast.LENGTH_LONG).show();
 		}
 	}
@@ -416,8 +436,7 @@ public class ClcikToApply extends Activity {
 			// decode with inSampleSize
 			BitmapFactory.Options o2 = new BitmapFactory.Options();
 			o2.inSampleSize = scale;
-			Bitmap bitmap = BitmapFactory.decodeFileDescriptor(imageSource,
-					null, o2);
+			bitmap = BitmapFactory.decodeFileDescriptor(imageSource, null, o2);
 
 			imageView_profilepic.setImageBitmap(bitmap);
 

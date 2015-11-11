@@ -31,12 +31,12 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
-        </activity>
+        </activity><activity android:name="ClcikToApply"></activity>
         <activity android:name="HowToApply"></activity>
         <activity android:name="GetAdmitCard"></activity>
         <activity android:name="AdmitCardClass"></activity>
-        <activity android:name="ClcikToApply"></activity>
         <activity android:name="Preview"></activity>
+        
     </application>
 
 </manifest>

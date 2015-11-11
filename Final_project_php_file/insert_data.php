@@ -50,6 +50,32 @@ if (isset($_POST['applicant_name']) && isset($_POST['father_name']) && isset($_P
 	$organization = $_POST['organization'];
 	$status = $_POST['status'];
 	
+	$image = $_POST["image"];
+	
+	
+	  $ImageName = $applicant_name.".png";
+    // Decode Image
+    $binary=base64_decode($image);
+    header('Content-Type: bitmap; charset=utf-8');
+    // Images will be saved under 'www/imgupload/uplodedimages' folder
+    $file = fopen('images/'.$ImageName, 'wb');
+    // Create File
+    fwrite($file, $binary);
+    fclose($file);
+      
+       
+       // $filePath = "images/".$ImageName; // path of the file to store
+		//echo $filepath;
+        //echo "file ".$filePath;
+        // check if file exits
+        //if (file_exists($filePath)) {
+          //  unlink($filePath); // delete the old file
+        //} 
+       //  create a new empty file
+        //$myfile = fopen($filePath, "w") or die("Unable to open file!");
+       //  add data to that file
+        //file_put_contents($filePath, base64_decode($image));
+	
  
     // include db connect class
    // require_once __DIR__ . '/db_connect.php';
@@ -60,9 +86,23 @@ if (isset($_POST['applicant_name']) && isset($_POST['father_name']) && isset($_P
  
         // Selecing database
         $db = mysql_select_db("final_project") or die(mysql_error()) or die(mysql_error());
+		
+		
+		
+		 $applicant_roll = "1531001";
+
+
+      $sqlTemp = "select * from `final_project`.`insert_data` ORDER BY applicant_roll DESC";
+      $retval  = mysql_query($sqlTemp);
+
+      while($row = mysql_fetch_array(($retval))){
+        $applicant_roll = $row['applicant_roll']+1;
+        break;
+      }
  
     // mysql inserting a new row
-    $result = mysql_query("INSERT INTO insert_data(applicant_name,father_name,mother_name,nationality,permanent_address,present_address,contact_number,email,date_of_birth,sex,blood_group,degree1,degree2,degree3,degree4,group1,group2,group3,group4,board1,board2,board3,board4,ssc_cgpa,hsc_cgpa,hons_cgpa,others_cgpa,passing_year1,passing_year2,passing_year3,passing_year4,organization,status) VALUES('$applicant_name','$father_name','$mother_name','$nationality','$permanent_address','$present_address','$contact_number','$email','$date_of_birth','$sex','$blood_group','$degree1','$degree2','$degree3','$degree4','$group1','$group2','$group3','$group4','$board1','$board2','$board3','$board4','$ssc_cgpa','$hsc_cgpa','$hons_cgpa','$others_cgpa','$passing_year1','$passing_year2','$passing_year3','$passing_year4','$organization','$status')");
+    $result = mysql_query("INSERT INTO insert_data(applicant_name,father_name,mother_name,nationality,permanent_address,present_address,contact_number,email,date_of_birth,sex,blood_group,degree1,degree2,degree3,degree4,group1,group2,group3,group4,board1,board2,board3,board4,ssc_cgpa,hsc_cgpa,hons_cgpa,others_cgpa,passing_year1,passing_year2,passing_year3,passing_year4,organization,status,applicant_roll,imageName) 
+VALUES('$applicant_name','$father_name','$mother_name','$nationality','$permanent_address','$present_address','$contact_number','$email','$date_of_birth','$sex','$blood_group','$degree1','$degree2','$degree3','$degree4','$group1','$group2','$group3','$group4','$board1','$board2','$board3','$board4','$ssc_cgpa','$hsc_cgpa','$hons_cgpa','$others_cgpa','$passing_year1','$passing_year2','$passing_year3','$passing_year4','$organization','$status','$applicant_roll','$ImageName')");
  
     // check if row inserted or not
     if ($result) {

@@ -75,5 +75,31 @@ Wi-fi connectivity and modern computer lab facilities</string>
     
     <string name="spinner_sex_prompt">Select Your Gender </string>
     <string name="spinner_blood_group">Select Your Blood Group </string>
+    
+    <string name="text" ><b> <font fgcolor="red"> Option 1: Online Application</font></b>\n
+
+             <font fgcolor="@color/Blue">Step1:</font> Make a payment of Tk 1000/- as application  processing fee from your/agent’s Dutch Bangla Mobile Banking Account to CSE, JU biller code 345.\n The process is as follows:\n
+
+<i>Using your/agent’s Dutch Bangla Mobile Banking Account, dial *322#</i>\n
+<i>From the menu appeared, select 1 for Payment</i>\n
+<i>Enter 345 as Biller ID,</i>\n
+<i>Enter your mobile no. as Bill Number</i>\n
+<i>Enter 1000 as Amount</i>\n
+<i>Enter your/agent’s mobile banking PIN</i>\n
+<i>Collect Txnid (TRANSACTION ID) from the return SMS</i>\n
+<b>Go to step 2 after 24 hours.</b>\n
+<font fgcolor="@color/Blue">Step2:</font> Complete your Registration. Follow the link (After successful registration you will be provided your user name and password through email [check your spam])\n
+
+<font fgcolor="@color/Blue">Step3:</font> Login using user name and password.\n
+
+<font fgcolor="@color/Blue">Step4:</font> Enter your mobile number and Transaction ID(Txnid)]\n
+
+<font fgcolor="@color/Blue">Step5:</font> Download your admit card.\n
+
+ 
+
+<b> <font fgcolor="red">Option 2:  Offline Application</font></b>\n
+
+Prescribed application form and admission brochure can be collected from the departmental office or can be downloaded from www.juniv.edu/cse/emcs.\n Filled application form along with attested copies of all certificates/mark sheets, two passport size photographs and an amount of BDT 800/- (in cash) should be submitted to the departmental office during the office hour between 9:00 am to 4:30 pm.</string>
 
 </resources>
