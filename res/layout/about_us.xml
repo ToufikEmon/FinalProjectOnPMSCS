@@ -50,7 +50,7 @@ Jahangirnagar University"
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/txtChyonMail"
                     style="@style/ButtonText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -110,7 +110,7 @@ Jahangirnagar University"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView2"
+                        android:id="@+id/textEmonMail"
                         style="@style/ButtonText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -156,7 +156,7 @@ Jahangirnagar University"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/txtMail"
+                        android:id="@+id/txtAnupMail"
                         style="@style/ButtonText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -166,7 +166,7 @@ Jahangirnagar University"
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/txtNumber"
+                        android:id="@+id/txtAnupNumber"
                         style="@style/ButtonText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

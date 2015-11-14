@@ -34,15 +34,7 @@
             android:layout_gravity="center_horizontal"
             android:contentDescription="bl"
             android:scaleType="fitXY"
-            android:src="@drawable/hall" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:contentDescription="chyon"
-            android:scaleType="fitXY"
-            android:src="@drawable/ekus" />
+            android:src="@drawable/mhhall" />
 
         <ImageView
             android:layout_width="match_parent"
@@ -51,6 +43,38 @@
             android:contentDescription="emo"
             android:scaleType="fitXY"
             android:src="@drawable/maingate" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="vuha"
+            android:scaleType="fitXY"
+            android:src="@drawable/cafeteria" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="bl"
+            android:scaleType="fitXY"
+            android:src="@drawable/library" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="chyon"
+            android:scaleType="fitXY"
+            android:src="@drawable/lonelyroad" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="emo"
+            android:scaleType="fitXY"
+            android:src="@drawable/scince" />
     </ViewFlipper>
 
     <Button

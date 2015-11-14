@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tvOffice"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_style"
+            android:text="@string/historyju" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_style"
+            android:text="Fee Structure"
+            android:textColor="@color/Blue" />
+
+        <ImageView
+            android:id="@+id/imgePMSCSFeeStructure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fee_structure"
+            android:padding="4sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_style"
+            android:text="BUS SCHEDULE"
+            android:textColor="@color/Blue" />
+
+        <ImageView
+            android:id="@+id/imgePMSCSBuschedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bus"
+            android:padding="4sp" />
+    </LinearLayout>
+
+</ScrollView>

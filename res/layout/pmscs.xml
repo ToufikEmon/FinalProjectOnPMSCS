@@ -4,14 +4,115 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView1"
-        style="@style/ButtonText"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@drawable/edit_text_style"
-        android:gravity="center"
-        android:text="@string/pmscs" />
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:text="@string/pmscs" />
+        
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:text="Program Feature"
+            android:textColor="@color/Blue" />
+
+        <ImageView
+            android:id="@+id/imgePMSCS1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/program_features"
+            android:padding="4sp"
+            style="@drawable/edit_text_style" />
+        
+         <TextView
+            android:id="@+id/textView3"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:text="Admission Requirements"
+            android:textColor="@color/Blue" />
+
+        <ImageView
+            android:id="@+id/imgePMSCS2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/admission_requirements"
+            android:padding="4sp"
+            style="@drawable/edit_text_style" />
+        
+         <TextView
+            android:id="@+id/textView4"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:text="Credit Requirements"
+            android:textColor="@color/Blue" />
+
+        <ImageView
+            android:id="@+id/imgePMSCS3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/requirements"
+            android:padding="4sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:text="Foundation Course"
+            android:textColor="@color/Blue" />
+        
+        <ImageView
+            android:id="@+id/imgePMSCS4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/foundation_course"
+            android:padding="4sp" 
+            android:scaleType="fitXY"/>
+        
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/ButtonText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_text_style"
+            android:gravity="center"
+            android:text="Core Course"
+            android:textColor="@color/Blue" />
+
+        <ImageView
+            android:id="@+id/imgePMSCSFeeStructure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/core_course"
+            android:padding="4sp"
+            android:scaleType="fitXY"
+            android:paddingBottom="20dp" />
+    </LinearLayout>
 
 </ScrollView>

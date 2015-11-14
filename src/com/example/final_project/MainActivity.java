@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -170,27 +171,32 @@ public class MainActivity extends Activity {
 	private void displayView(int position) {
 		// update the main content by replacing fragments
 		Fragment fragment = null;
+		FragmentManager fm = getFragmentManager();
+		 FragmentTransaction ft = fm.beginTransaction();
 
 		switch (position) {
 		case 0:
 			fragment = new HomeFragment();
+			
 			break;
 
 		case 1:
-			fragment = new CSEJU();
+			fragment = new AchievementOfCSEJU();
+			ft.addToBackStack(null);
 
 			break;
 		case 2:
 			fragment = new PMSCS();
 			break;
 		case 3:
-			fragment = new HistoryOfJu();
+			fragment = new FAQ();
 			break;
 		case 4:
 			fragment = new BeautifulPlaces();
 			break;
 		case 5:
 			fragment = new AboutUs();
+
 			break;
 
 		default:

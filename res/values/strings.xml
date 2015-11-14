@@ -12,9 +12,9 @@
 
     <string-array name="nav_drawer_item">
         <item>Home</item>
-        <item>CSE JU</item>
+        <item>Achievement Of JU CSE</item>
         <item>PMSCS</item>
-        <item>History Of JU</item>
+        <item>FAQ</item>
         <item>Beautiful Places</item>
         <item>About Us!</item>
     </string-array>
@@ -23,7 +23,7 @@
         <item>@drawable/ic_home</item>
         <item>@drawable/cse_ju</item>
         <item>@drawable/pmscs</item>
-        <item>@drawable/hisytory</item>
+        <item>@drawable/faq_ico</item>
         <item>@drawable/beautiful_places</item>
         <item>@drawable/about_us</item>
     </array>
@@ -48,12 +48,9 @@
     <string name="gpa">CGPA</string>
     <string name="year">Years</string>
     <string name="academic_details">Academic Details</string>
-    <string name="pmscs">Highly qualified faculty members with international teaching and research exposures
-Trimester system to complete the program in shortest possible time
-Classes conducted on Fridays only
-Wi-fi connectivity and modern computer lab facilities</string>
+    <string name="pmscs"><b>Degree:\n<font fgcolor="red"> Master of Science in Computer Science</font></b></string>
     <string name="cseju">The study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</string>
-    <string name="historyju">The study of computer programming itself investigates various aspects of the use of programming languages and complex systems, and human-computer interaction focuses on the challenges in making computers and computations useful, usable, and universally accessible to humans.</string>
+    <string name="historyju">For any kind of query or any questions please call the number below.\n<b><font fgcolor="red">01941336337</font></b> \n Or come to the office within 2 pm all along the week</string>
     <string name="download">Download PDF</string>
     <string name="str_btn_start">Start SlideShow</string>
     <string name="str_btn_stop">Stop SlideShow</string>
@@ -72,34 +69,13 @@ Wi-fi connectivity and modern computer lab facilities</string>
         <item>O+</item>
         <item>O-</item>
     </string-array>
-    
+
     <string name="spinner_sex_prompt">Select Your Gender </string>
     <string name="spinner_blood_group">Select Your Blood Group </string>
-    
-    <string name="text" ><b> <font fgcolor="red"> Option 1: Online Application</font></b>\n
-
-             <font fgcolor="@color/Blue">Step1:</font> Make a payment of Tk 1000/- as application  processing fee from your/agent’s Dutch Bangla Mobile Banking Account to CSE, JU biller code 345.\n The process is as follows:\n
-
-<i>Using your/agent’s Dutch Bangla Mobile Banking Account, dial *322#</i>\n
-<i>From the menu appeared, select 1 for Payment</i>\n
-<i>Enter 345 as Biller ID,</i>\n
-<i>Enter your mobile no. as Bill Number</i>\n
-<i>Enter 1000 as Amount</i>\n
-<i>Enter your/agent’s mobile banking PIN</i>\n
-<i>Collect Txnid (TRANSACTION ID) from the return SMS</i>\n
-<b>Go to step 2 after 24 hours.</b>\n
-<font fgcolor="@color/Blue">Step2:</font> Complete your Registration. Follow the link (After successful registration you will be provided your user name and password through email [check your spam])\n
-
-<font fgcolor="@color/Blue">Step3:</font> Login using user name and password.\n
-
-<font fgcolor="@color/Blue">Step4:</font> Enter your mobile number and Transaction ID(Txnid)]\n
-
-<font fgcolor="@color/Blue">Step5:</font> Download your admit card.\n
-
- 
-
-<b> <font fgcolor="red">Option 2:  Offline Application</font></b>\n
-
-Prescribed application form and admission brochure can be collected from the departmental office or can be downloaded from www.juniv.edu/cse/emcs.\n Filled application form along with attested copies of all certificates/mark sheets, two passport size photographs and an amount of BDT 800/- (in cash) should be submitted to the departmental office during the office hour between 9:00 am to 4:30 pm.</string>
+    <string name="text"><b><font fgcolor="red"> Option 1: Online Application</font></b>\n<font fgcolor="blue">Step1:</font><font fgcolor="black"> Make a payment of Tk 1000/- as application  processing fee from your/agent’s Dutch Bangla Mobile Banking Account to CSE, JU biller code 345.</font>\n <font fgcolor="blue"><b>The process is as follows:</b></font>\n<i><font fgcolor="black">Using your/agent’s Dutch Bangla Mobile Banking Account, dial *322#</font></i>\n<i><font fgcolor="black">From the menu appeared, select 1 for Payment</font></i>\n<i><font fgcolor="black">Enter 345 as Biller ID,</font></i>\n<i><font fgcolor="black">Enter your mobile no. as Bill Number</font></i>\n<i><font fgcolor="black">Enter 1000 as Amount</font></i>\n<i><font fgcolor="black">Enter your/agent’s mobile banking PIN</font></i>\n<i><font fgcolor="black">Collect Txnid (TRANSACTION ID) from the return SMS</font></i>\n<b><font fgcolor="blue">Go to step 2 after 24 hours.</font></b>\n<font fgcolor="blue">Step2:</font><font fgcolor="black"> Complete your Registration. Follow the link (After successful registration you will be provided your user name and password through email [check your spam])</font>\n<font fgcolor="blue">Step3:</font><font fgcolor="black"> Login using user name and password.</font>\n<font fgcolor="blue">Step4:</font><font fgcolor="black"> Enter your mobile number and Transaction ID(Txnid)]</font>\n<font fgcolor="blue">Step5:</font><font fgcolor="black"> Download your admit card.</font>\n<b><font fgcolor="red">Option 2:  Offline Application</font></b>\n<font fgcolor="black">Prescribed application form and admission brochure can be collected from the departmental office or can be downloaded from <b><i><a href="https://www.juniv.edu/cse/emcs"><font fgcolor="blue">www.juniv.edu/cse/emcs</font></a></i></b>.\n Filled application form along with attested copies of all certificates/mark sheets, two passport size photographs and an amount of BDT 800/- (in cash) should be submitted to the departmental office during the office hour between 9:00 am to 4:30 pm.</font></string>
+    <string name="admit_card_news"><b><font fgcolor="red">Your payment is clear!</font></b>\n\n <b>Please Visit This Website To Print Your Admitcard</b>\n<a href="http://juniv.edu/cseju/emcs/login.php">http://juniv.edu/cseju/emcs/login.php</a>\n\n<i><font fgcolor="blue">Use your mail and pasword to login ! </font></i></string>
+    <string name="achievement_one">Stood First In ACM ICPC Bangladesh region, whre another 2 team also within 10 in 2015</string>
+    <string name="achievement_two">Stood First In ACM ICPCE Bangladesh Region in 2014</string>
+    <string name="achievement_three">Two Times World Finalist In ACM ICPC </string>
 
 </resources>

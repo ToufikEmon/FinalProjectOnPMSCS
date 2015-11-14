@@ -9,10 +9,10 @@ import java.util.List;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -23,10 +23,8 @@ import android.os.Bundle;
 import android.os.ParcelFileDescriptor;
 import android.util.Base64;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -60,7 +58,7 @@ public class ClcikToApply extends Activity {
 
 	Button btnSubmit, btnPreview;
 
-	private static String url_insert_into_database = "http://172.148.26.254/final_project/insert_data.php";
+	private static String url_insert_into_database = "http://172.16.48.111/final_project/insert_data.php";
 
 	// JSON Node names
 	private static final String TAG_SUCCESS = "success";
@@ -351,28 +349,28 @@ public class ClcikToApply extends Activity {
 					url_insert_into_database, "POST", params);
 
 			// check log cat fro response
-			// Log.d("Create Response", json.toString());
-
-			// check for success tag
-			// try {
-			// int success = json.getInt(TAG_SUCCESS);
-
-			// if (success == 1) {
-			// successfully created product
-			// Intent i = new Intent(getApplicationContext(),
-			// / ClcikToApply.class);
-			// startActivity(i);
-			// Toast.makeText(getApplicationContext(), "Successfull",
-			// Toast.LENGTH_LONG).show();
-
-			// closing this screen
-			// finish();
-			// } else {
-			// failed to create product
-			// }
-			// } catch (JSONException e) {
-			// e.printStackTrace();
-			// }
+//			 Log.d("Create Response", json.toString());
+//
+//			// check for success tag
+//			try {
+//				int success = json.getInt(TAG_SUCCESS);
+////
+//			if (success == 1) {
+////					// successfully created product
+//					Intent i = new Intent(getApplicationContext(),
+//						MainActivity.class);
+//					startActivity(i);
+//////					Toast.makeText(getApplicationContext(), "Successfull",
+//////							Toast.LENGTH_LONG).show();
+////
+//					// closing this screen
+//					finish();
+//				} else {
+//				// failed to create product
+//				}
+//			} catch (JSONException e) {
+//			e.printStackTrace();
+//			}
 
 			return null;
 		}

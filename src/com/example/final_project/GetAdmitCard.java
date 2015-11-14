@@ -68,7 +68,7 @@ public class GetAdmitCard extends Activity {
 
 			httpclient = new DefaultHttpClient();
 			httppost = new HttpPost(
-					"http://172.148.26.254/Final_project/login.php"); // make sure
+					"http://172.16.48.111/Final_project/login.php"); // make sure
 																	// the url
 																	// is
 																	// correct.

@@ -6,15 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class HistoryOfJu extends Fragment{
-	public HistoryOfJu() {
+public class AchievementOfCSEJU extends Fragment {
+	public AchievementOfCSEJU() {
 		// TODO Auto-generated constructor stub
 	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.history_ju,
-				container, false);
+		View view = inflater.inflate(R.layout.achievement, container, false);
 		return view;
 	}
 

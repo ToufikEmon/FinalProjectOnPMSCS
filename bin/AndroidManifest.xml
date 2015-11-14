@@ -9,6 +9,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
    
     
     
@@ -32,7 +33,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity><activity android:name="ClcikToApply"></activity>
-        <activity android:name="HowToApply"></activity>
         <activity android:name="GetAdmitCard"></activity>
         <activity android:name="AdmitCardClass"></activity>
         <activity android:name="Preview"></activity>

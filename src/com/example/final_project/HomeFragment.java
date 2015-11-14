@@ -41,8 +41,8 @@ public class HomeFragment extends Fragment implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
-//		FragmentManager fm = getFragmentManager();
-//		FragmentTransaction ft = fm.beginTransaction();
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
 		switch (v.getId()) {
 		case R.id.btnApply:
 
@@ -64,15 +64,15 @@ public class HomeFragment extends Fragment implements OnClickListener {
 			break;
 		case R.id.btnHowToAply:
 
-			Intent intent = new Intent(getActivity(), HowToApply.class);
-			startActivity(intent);
-			break;
+			// Intent intent = new Intent(getActivity(), HowToApply.class);
+			// startActivity(intent);
+			// break;
 
-		// HowToApply how = new HowToApply();
-		// ft.replace(R.id.frame_container, how);
-		// ft.addToBackStack(null);
-		// ft.commit();
-		// break;
+			HowToApply how = new HowToApply();
+			ft.replace(R.id.frame_container, how);
+			ft.addToBackStack(null);
+			ft.commit();
+			break;
 
 		default:
 			break;

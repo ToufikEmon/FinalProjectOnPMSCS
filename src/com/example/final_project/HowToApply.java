@@ -1,15 +1,18 @@
 package com.example.final_project;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class HowToApply extends Activity {
+public class HowToApply extends Fragment {
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.how_to_apply);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
 
+		View view = inflater.inflate(R.layout.how_to_apply, container, false);
+		return view;
 	}
 }

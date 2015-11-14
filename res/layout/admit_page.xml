@@ -9,6 +9,8 @@
         style="@style/ButtonText"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Your payment is clear...Please Visit The juniv.edu for download your Admit Card" />
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/admit_card_news" />
 
 </LinearLayout>
